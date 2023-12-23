@@ -1,0 +1,69 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+
+{% block title %}Inicio - Mi Sitio Web{% endblock %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+<div class="cards">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Gastronomico</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse action-checkbox " id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="admin">admin <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="listar_proyectos">Otra Página</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <h1 class="display-4">Seminario Gastronomico</h1>
+        <p class="lead">sistema web, que permita almacenar la lista de inscritos
+            para un seminario de gastronómica.</p>
+    </div>
+<div class="card">
+    <div class="container">
+        <h2>Django api</h2>
+        <p>IR A MANIPULAR DATOS</p>
+        <a href="api" class="btn btn-primary">Api Root</a>
+       
+    </div>
+</div>
+<div class="card">
+    <div class="container">
+        <h2>listar Inscritos</h2>
+        <p>Listar Inscritos</p>
+        <a href="Listar" class="btn btn-primary">Ir a listar Inscritos</a>
+        
+    </div>
+</div>
+<div class="card">
+    <div class="container">
+        <h2>listar Instituciones</h2>
+        <p>Listar Instituciones</p>
+        <a href="listar_instituciones" class="btn btn-primary">Ir a listar Instituciones</a>
+        
+    </div>
+</div>
+<div class="card">
+    <div class="container">
+        <h2>listar Project</h2>
+        <p>Listar Project</p>
+        <a href="listar_proyectos" class="btn btn-primary">Ir a listar Project</a>
+        
+    </div>
+</div>
+{% endblock %}
+
+

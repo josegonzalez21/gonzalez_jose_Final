@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Listar Proyectos - Tu Aplicación{% endblock %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Gastronomico</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse action-checkbox " id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="admin">admin <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="listar_proyectos">Otra Página</a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+    <div class="alert alert-info display-1 text-center">
+        <h1>Listado de Proyectos</h1>
+    </div>
+
+    <div class="container mt-4 cubo2">
+        {% for proyecto in proyectos %}
+            <div class="card mb-3">
+                <div class="card-header">
+                    Proyecto #{{ proyecto.id }}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ proyecto.nombre }}</h5>
+                    <p class="card-text">Descripción: {{ proyecto.descripcion }}</p>
+                    <!-- Agrega más campos según tus necesidades -->
+                </div>
+            </div>
+        {% endfor %}
+        <a href="{% url 'agregar_proyecto' %}" class="btn btn-primary">Agregar Institución</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+<!-- En tu_template_agregar_proyecto.html -->
+{% extends 'base.html' %}
+
+{% block title %}Agregar Proyecto{% endblock %}
+
+{% block content %}
+
+    <h2>Agregar Proyecto</h2>
+    <form method="post" action="{% url 'agregar_proyecto' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+{% endblock %}
